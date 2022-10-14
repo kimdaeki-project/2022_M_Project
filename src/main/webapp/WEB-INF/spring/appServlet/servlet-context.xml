@@ -113,6 +113,10 @@
 			<mapping path="/kjk/member/**"/>
 			<exclude-mapping path="/kjk/member/login"/>
 			<exclude-mapping path="/kjk/member/join"/>
+			<exclude-mapping path="/kjk/member/checkId"/>
+			<exclude-mapping path="/kjk/member/checkName"/>
+			<exclude-mapping path="/kjk/member/checkEmail"/>
+			<exclude-mapping path="/kjk/member/checkPhone"/>
 			<beans:ref bean="memberInterceptor1"/>
 		</interceptor>
 		

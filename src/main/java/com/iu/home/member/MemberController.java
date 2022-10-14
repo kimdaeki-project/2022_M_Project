@@ -128,30 +128,31 @@ public class MemberController
 
 		mv.addObject("dto", memberDTO);
 
-//		mv.setViewName("kjk/member/mypage");
+		// mv.setViewName("kjk/member/mypage");
 
 		return mv;
 	}
 
-//	@PostMapping(value = "mypage")
-//	public void mypage(ReviewsDTO reviewsDTO, HttpSession session) throws Exception
-//	{
-//		ModelAndView mv = new ModelAndView();
-//
-//		MemberDTO memberDTO = (MemberDTO) session.getAttribute("member");
-//		memberDTO = memberService.getMyPage(memberDTO);
-//
-//		reviewsDTO.setUserID(memberDTO.getUserID());
-//		List<ReviewsDTO> ar = memberService.reviewsList(reviewsDTO);
-//
-//		for (ReviewsDTO reviewsDTO2 : ar)
-//		{
-//			System.out.println("re Num: " + reviewsDTO2.getShopNum());
-//		}
-//		mv.addObject("rList", ar);
-//		mv.addObject("dto", memberDTO);
-//		mv.setViewName("kdy/shop/detailHTML?shopNum=" + reviewsDTO.getShopNum());
-//	}
+	// @PostMapping(value = "mypage")
+	// public void mypage(ReviewsDTO reviewsDTO, HttpSession session) throws
+	// Exception
+	// {
+	// ModelAndView mv = new ModelAndView();
+	//
+	// MemberDTO memberDTO = (MemberDTO) session.getAttribute("member");
+	// memberDTO = memberService.getMyPage(memberDTO);
+	//
+	// reviewsDTO.setUserID(memberDTO.getUserID());
+	// List<ReviewsDTO> ar = memberService.reviewsList(reviewsDTO);
+	//
+	// for (ReviewsDTO reviewsDTO2 : ar)
+	// {
+	// System.out.println("re Num: " + reviewsDTO2.getShopNum());
+	// }
+	// mv.addObject("rList", ar);
+	// mv.addObject("dto", memberDTO);
+	// mv.setViewName("kdy/shop/detailHTML?shopNum=" + reviewsDTO.getShopNum());
+	// }
 
 	@GetMapping(value = "adpage")
 	public ModelAndView adMypage(MemberDTO memberDTO, HttpSession session) throws Exception
@@ -217,7 +218,7 @@ public class MemberController
 		return "redirect:../../";
 	}
 
-	@RequestMapping("checkId")
+	@RequestMapping(value = "checkId")
 	@ResponseBody
 	public int checkId(String id) throws Exception
 	{
